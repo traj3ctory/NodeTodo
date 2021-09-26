@@ -1,7 +1,9 @@
 module.exports = (app) => {
 
     const MongoClient = require('mongodb').MongoClient;
-    const uri = "mongodb+srv://traj3ctory:CharMZ06@cluster0.ic2kd.mongodb.net/traj3ctory?retryWrites=true&w=majority";
+    const password = 'CharMZ06';
+    // const uri = "mongodb+srv://traj3ctory:CharMZ06@cluster0.ic2kd.mongodb.net/traj3ctory?retryWrites=true&w=majority";
+    const uri = `mongodb+srv://traj3ctory:${password}@cluster0.ic2kd.mongodb.net/traj3ctory?retryWrites=true&w=majority`
     const client = new MongoClient(uri, { useNewUrlParser: true, useUnifiedTopology: true });
     let bodyParser = require('body-parser');
 
@@ -14,7 +16,7 @@ module.exports = (app) => {
         const Todo = db.collection("todos");
 
         app.get('/todo', (req, res) => {
-            //get dat from mongodb and display res
+            //get data from mongodb and display res
             Todo.find({}).toArray((err, data) => {
                 if (err) throw err;
                 res.render('todo', { todos: data });
