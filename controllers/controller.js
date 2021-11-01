@@ -31,9 +31,9 @@ module.exports = (app) => {
         });
 
         app.delete('/todo/:item', (req, res) => {
-
             Todo.deleteOne({ item: req.params.item.replace(/\-/g, " ") }, (err, data) => {
                 if (err) throw (err);
+                console.log(err)
                 res.json(data);
             })
         });

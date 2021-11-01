@@ -1,6 +1,5 @@
 body {
-    background-color: #121212;
-    color: #ffffff;
+    background: #121212 url('/image/dark.jpg') no-repeat top center;
 }
 
 ul>li:hover {
@@ -10,9 +9,24 @@ ul>li:hover {
 
 .btn-def {
     background-color: #333333;
-    color: #ffffff
+    color: #ffffff;
 }
+
 .btn-def:hover {
     background-color: #333333;
     color: #ffffff
+}
+div.card{
+    background-color: #ffffff12;
+}
+.list-group-item{
+    padding: 0.4rem 1rem;
+    border-radius: 0.25rem !important;
+    transition: all 0.5s ease-in;
+    margin-bottom: 1rem;
+}
+.list-group-item:hover{
+    padding: 0.35rem 1rem;
+    border-bottom-left-radius: 0.75rem !important;
+    transform: scale(1.01);
 }
