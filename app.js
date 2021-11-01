@@ -1,5 +1,7 @@
 let express = require('express');
 let todoControl = require('./controllers/controller');
+const hostname = '127.0.0.1'
+const port = 3000
 
 let app = express();
 
@@ -12,4 +14,4 @@ app.use(express.static('./public'));
 //fire controllers
 todoControl(app);
 
-app.listen(4000);
+app.listen(port, hostname);
