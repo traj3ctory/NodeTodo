@@ -1,7 +1,6 @@
 module.exports = (app) => {
   const MongoClient = require("mongodb").MongoClient;
   const password = "CharMZ06";
-  // const uri = "mongodb+srv://traj3ctory:CharMZ06@cluster0.ic2kd.mongodb.net/traj3ctory?retryWrites=true&w=majority";
   const uri = `mongodb+srv://traj3ctory:${password}@cluster0.ic2kd.mongodb.net/traj3ctory?retryWrites=true&w=majority`;
   const client = new MongoClient(uri, {
     useNewUrlParser: true,
