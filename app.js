@@ -1,7 +1,7 @@
-let express = require('express');
-let todoControl = require('./controllers/controller');
+const express = require('express');
+const todoControl = require('./controllers/controller');
 
-let app = express();
+const app = express();
 
 //template
 app.set('view engine', 'ejs');
@@ -11,5 +11,9 @@ app.use(express.static('./public'));
 
 //fire controllers
 todoControl(app);
+
+
+
+app.use('/', )
 
 app.listen(3000);
