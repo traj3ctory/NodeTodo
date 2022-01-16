@@ -12,8 +12,6 @@ app.use(express.static('./public'));
 //fire controllers
 todoControl(app);
 
-
-
-app.use('/', )
-
 app.listen(3000);
+
+console.log('App started on 3000');
