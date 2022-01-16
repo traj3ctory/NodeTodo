@@ -31,10 +31,11 @@ module.exports = (app) => {
         });
 
         app.delete('/todo/:item', (req, res) => {
-          console.log(req.params.item);
-
-            Todo.deleteOne({ item: req.params.item.replace(/\-/g, " ") }, (err, data) => {
+          const id = req.params.item.replace(/\-/g, "");
+            Todo.deleteOne({ item: id }, (err, data) => {
                 if (err) throw (err);
+                
+                console.log(data);
                 res.json(data);
             })
         });
